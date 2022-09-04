@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table,th,tr,td{
+            border: 1px solid black;
+
+        }
+    </style>
+    <script>
+        function addthis(){
+            var a = document.getElementById("name");
+            var b = document.getElementById("address");
+            var c = document.getElementById("phone");
+
+            var table = document.getElementById("tables");
+            var tr = document.createElement("tr");
+            
+           var td1 = document.createElement("td");
+           td1.innerHTML = a.value;
+           tr.appendChild(td1);
+
+           var td2 = document.createElement("td");
+           td2.innerHTML = b.value;
+           tr.appendChild(td2);
+
+           var td3 = document.createElement("td");
+           td3.innerHTML = c.value;
+           tr.appendChild(td3);
+            table.appendChild(tr);
+
+        }
+    </script>
+</head>
+<body>
+    <form action=addthis()>
+        <p>ชื่อลูกค้า:<input type="text" id="name"><br>
+        ที่อยู่:<input type="text" id="address"><br>
+        โทรศัพท์:<input type="text" id="phone"></p>
+        <input type="button" onclick="addthis()" value="เพิ่ม">
+    </form><br>
+    <table id="tables">
+            <th>ชื่อลูกค้า</th>
+            <th> ที่อยู่</th>
+            <th>โทรศัพท์</th>
+    </table>
+</ul>
+    
+</body>
+</html>
